@@ -1,3 +1,8 @@
+(note: this is a fork of the zotero translation server at the below url.  But not a nice github fork, it's a brutish manual fork where I just cloned it and then made my own repo, mainly because there are a bunch of submodules in the original that I don't want to bother with.  You probably shouldn't use it. I'm planning to hack around in it and use it as a base for setting up zotero translator access on ipad via something like heroku, now.sh, glitch, etc.  But seriouslt, go to the original at [https://github.com/zotero/translation-server](https://github.com/zotero/translation-server) if you want to actually use it.  Also, the Zotero code is under the GNU Affero General Public License, so, I guess, any code I add here when I get around to doing so will also be under that license, it is written, it is done, selah.)
+
+
+(original readme follows)
+
 # Zotero Translation Server v2
 
 The Zotero translation server lets you use [Zotero translators](https://www.zotero.org/support/translators) without the Zotero client.
