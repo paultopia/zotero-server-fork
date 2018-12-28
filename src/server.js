@@ -41,8 +41,8 @@ const app = module.exports = new Koa();
 app.use(cors);
 app.use(bodyParser({ enableTypes: ['text', 'json']}));
 app.use(_.post('/web', WebEndpoint.handle.bind(WebEndpoint)));
-// app.use(_.post('/search', SearchEndpoint.handle.bind(SearchEndpoint)));
-// app.use(_.post('/export', ExportEndpoint.handle.bind(ExportEndpoint)));
+app.use(_.post('/search', SearchEndpoint.handle.bind(SearchEndpoint)));
+app.use(_.post('/export', ExportEndpoint.handle.bind(ExportEndpoint)));
 
 Debug.init(1);
 Translators.init()
@@ -50,8 +50,7 @@ Translators.init()
 	// Don't start server in test mode, since it's handled by supertest
 	if (process.env.NODE_ENV == 'test') return;
 	
-//	var port = config.get('port');
-    var port = 8080
-	app.listen(port);
+	var port = config.get('port');
+    app.listen(port);
 	Debug.log(`Listening on 0.0.0.0:${port}`);
 });
